@@ -1,0 +1,251 @@
+/**
+ * 📜 Hak Cipta & Lisensi ISC
+ * -------------------------------------------------
+ * Proyek ini dikembangkan dan diseesuaikan oleh **Branpedia** (Full Stack Developer & Software Engineer)
+ * pada **12 Maret 2025** dan dilindungi oleh hak cipta serta lisensi **ISC**.
+ *
+ * ⚠️ **PERINGATAN: Pelanggaran Hak Cipta** ⚠️
+ * Pelanggaran terhadap lisensi ini dapat mengakibatkan konsekuensi hukum serius, termasuk:
+ * - Ganti rugi hingga Rp 1.000.000.000,- sesuai Pasal 113 UU Hak Cipta No. 28 Tahun 2014.
+ * - Penghentian penggunaan proyek berdasarkan Pasal 114 UU Hak Cipta No. 28 Tahun 2014.
+ * - Tuntutan hukum pidana dan perdata sesuai Pasal 115 UU Hak Cipta No. 28 Tahun 2014.
+ *
+ * 🔹 **Syarat Lisensi** 🔹
+ * ✅ Anda **diperbolehkan** menggunakan proyek ini untuk keperluan pribadi atau edukasi.
+ * ❌ Anda **tidak diperbolehkan**:
+ *   - Mengklaim proyek ini sebagai milik sendiri.
+ *   - Menjual proyek ini tanpa izin tertulis.
+ *   - Menghapus atau mengubah atribusi hak cipta.
+ *
+ * - Email: branpediaid@gmail.com
+ * - GitHub: [@branpedia](https://github.com/branpedia)
+ */
+*/
+
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text-color: #ffffff;
+  --bg-dark: #343541;
+  --bg-light: #ffffff;
+  --border-color: #444654;
+  --icon-color: #acacbe;
+  --hover-color: #5b5e71;
+}
+
+.light-mode {
+  --text-color: #343541;
+  --bg-dark: #ffffff;
+  --border-color: #d9d9e3;
+  --icon-color: #a9a9bc;
+  --hover-color: #f1f1f3;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Select Dropdown */
+select {
+  width: 90%;
+  padding: 8px;
+  margin: 20px;
+  background: var(--bg-dark);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+/* Ads Container */
+.ads-container {
+  width: 90%;
+  margin: 15px auto;
+  padding: 10px;
+  background: var(--border-color);
+  color: var(--text-color);
+  border: 2px solid skyblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ads-container .close-btn {
+  color: crimson;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Chat Container */
+.chat-container {
+  overflow-y: auto;
+  max-height: 100vh;
+  padding-bottom: 150px;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: var(--icon-color);
+  border-radius: 10px;
+}
+
+/* Default Text */
+.default-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+}
+
+.default-text h1 {
+  font-size: 2.8rem;
+}
+
+.default-text p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Chat Styling */
+.chat {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.chat.outgoing {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+}
+
+.chat.incoming {
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Chat Details */
+.chat-details {
+  display: flex;
+  align-items: center;
+}
+
+.chat-details img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.chat-details p {
+  padding: 0 15px;
+  word-break: break-word;
+}
+
+/* Typing Animation */
+.typing-animation {
+  display: flex;
+  padding-left: 20px;
+}
+
+.typing-animation .typing-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-color);
+  margin: 0 3px;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Typing Container */
+.typing-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: var(--bg-dark);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+}
+
+.typing-textarea {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.typing-textarea textarea {
+  width: 100%;
+  height: 55px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background: var(--border-color);
+  color: var(--text-color);
+  resize: none;
+}
+
+.typing-controls {
+  display: flex;
+}
+
+.typing-controls span {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.typing-controls span:hover {
+  background: var(--hover-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .default-text h1 {
+    font-size: 2rem;
+  }
+
+  .chat-details img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .typing-container {
+    padding: 10px;
+  }
+
+  .typing-textarea textarea {
+    height: 45px;
+    padding: 10px;
+  }
+}
