@@ -1,0 +1,72 @@
+<!--/**
+ * 📜 Hak Cipta & Lisensi ISC
+ * -------------------------------------------------
+ * Proyek ini dikembangkan dan diseesuaikan oleh **Branpedia** (Full Stack Developer & Software Engineer)
+ * pada **12 Maret 2025** dan dilindungi oleh hak cipta serta lisensi **ISC**.
+ *
+ * ⚠️ **PERINGATAN: Pelanggaran Hak Cipta** ⚠️
+ * Pelanggaran terhadap lisensi ini dapat mengakibatkan konsekuensi hukum serius, termasuk:
+ * - Ganti rugi hingga Rp 1.000.000.000,- sesuai Pasal 113 UU Hak Cipta No. 28 Tahun 2014.
+ * - Penghentian penggunaan proyek berdasarkan Pasal 114 UU Hak Cipta No. 28 Tahun 2014.
+ * - Tuntutan hukum pidana dan perdata sesuai Pasal 115 UU Hak Cipta No. 28 Tahun 2014.
+ *
+ * 🔹 **Syarat Lisensi** 🔹
+ * ✅ Anda **diperbolehkan** menggunakan proyek ini untuk keperluan pribadi atau edukasi.
+ * ❌ Anda **tidak diperbolehkan**:
+ *   - Mengklaim proyek ini sebagai milik sendiri.
+ *   - Menjual proyek ini tanpa izin tertulis.
+ *   - Menghapus atau mengubah atribusi hak cipta.
+ *
+ * - Email: branpediaid@gmail.com
+ * - GitHub: [@branpedia](https://github.com/branpedia)
+*/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wotty AI - Smart AI Chatbot">
+  <meta name="author" content="Branpedia">
+  <title>Wotty AI - Smart Chatbot</title>
+
+  <!-- Google Font & Icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css?v=1.1">
+
+  <!-- External JS -->
+  <script src="./assets/js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- 🌟 Ads Area -->
+  <div class="ads-container" style="display: none;">
+    <p>
+      🚀 **Coba Wotty AI** &nbsp;<a href="https://forestapi.web.id" style="color: skyblue; text-decoration: none;">Forest API</a>
+    </p>
+    <span class="close-btn" onclick="closeAds()">
+      <i class="material-symbols-rounded">close</i>
+    </span>
+  </div>
+
+  <!-- 💬 Chat Container -->
+  <div class="chat-container"></div>
+
+  <!-- ⌨️ Typing Container -->
+  <div class="typing-container">
+    <div class="typing-content">
+      <div class="typing-textarea">
+        <textarea id="chat-input" spellcheck="false" placeholder="Ketik pesan di sini..." required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+      <div class="typing-controls">
+        <span id="theme-btn" class="material-symbols-rounded">light_mode</span>
+        <span id="delete-btn" class="material-symbols-rounded">delete</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
